@@ -1,5 +1,6 @@
 #!/bin/bash
 
+REPO="https://github.com/Sthopeless/debian_klipper_setup"
 KIAUH_REPO="https://github.com/dw-0/kiauh"
 HELIXSCREEN_REPO="https://github.com/prestonbrown/helixscreen.git"
 
@@ -9,13 +10,11 @@ to_install=()
 
 for pkg in "${dependencies[@]}"; do
     if ! command -v "$pkg" &> /dev/null; then
-        echo "$pkg is missing."
         to_install+=("$pkg")
     fi
 done
 
 if [ ${#to_install[@]} -ne 0 ]; then
-    echo "Installing: ${to_install[*]}..."
     sudo apt-get update
     sudo apt-get install -y "${to_install[@]}"
 fi
@@ -28,7 +27,6 @@ install_kiauh () {
 }
 
 install_helixscreen () {
-
     if [ ! -d "$HOME/kiauh/kiauh/extensions/helixscreen" ]; then
         cd ~/
         git clone --depth 1 "$HELIXSCREEN_REPO" /tmp/helixscreen
@@ -60,6 +58,14 @@ remove_helixscreen () {
     fi
 }
 
+download_repo() {
+    if [ ! -d "$HOME/debian_klipper_setup" ]; then
+        cd ~/
+        git clone "$REPO"
+    fi
+}
+
+download_repo
 install_kiauh
 install_timelapse
 install_helixscreen
