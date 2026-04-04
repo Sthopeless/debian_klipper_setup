@@ -36,7 +36,7 @@ install_helixscreen () {
 }
 
 install_timelapse () {
-    if [ ! -d "$HOME/kiauh/kiauh/extensions/timelapse" ]; then
+    if [ ! -d "$HOME/moonraker-timelapse" ]; then
         cd ~/
         git clone https://github.com/mainsail-crew/moonraker-timelapse.git
         cd ~/moonraker-timelapse
