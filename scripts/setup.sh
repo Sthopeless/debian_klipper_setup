@@ -70,5 +70,5 @@ install_kiauh
 install_timelapse
 install_helixscreen
 
-echo "Launching KIAUH. Please install Klipper, Moonraker, and Fluidd manually via the UI."
+echo "Launching KIAUH. Please install 1-Klipper, 2-Moonraker, 4-Fluidd, 8-Crowsnest and 7-KlipperScreen if necessary."
 ~/kiauh/kiauh.sh
