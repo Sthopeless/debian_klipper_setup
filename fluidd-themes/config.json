@@ -48,6 +48,14 @@
       }
     },
     {
+      "name": "Anycubic",
+      "color": "#41649A",
+      "isDark": true,
+      "logo": {
+        "src": "logo_anycubic.svg"
+      }
+    },
+    {
       "name": "Annex",
       "color": "#96CC4A",
       "isDark": true,
