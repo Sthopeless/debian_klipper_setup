@@ -1,0 +1,16 @@
+---
+services:
+  vscode:
+    image: lscr.io/linuxserver/code-server:${CONTAINER_VERSION-latest}
+    container_name: vscode
+    environment:
+      - PUID=${PUID-1000}
+      - PGID=${PGID-1000}
+      - TZ=${TZ-Europe/Amsterdam}
+      - SUDO_PASSWORD=${ROOT_PWD-password}
+      - PWA_APPNAME=vscode
+    volumes:
+      - ${DOCKER_FOLDER}/vscode:/config
+    ports:
+      - "8443:8443"
+    restart: ${RST-unless-stopped}
