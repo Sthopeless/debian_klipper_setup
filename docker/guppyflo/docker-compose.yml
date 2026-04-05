@@ -1,0 +1,10 @@
+---
+services:
+  guppyflo:
+    image: ghcr.io/ballaswag/guppyflo:${CONTAINER_VERSION-latest}
+    container_name: guppyflo
+    volumes:
+      - ${DOCKER_FOLDER}/guppyflo:/guppyflo/config:delegated
+    ports:
+      - "9873:9873"
+    restart: ${RST-unless-stopped}
