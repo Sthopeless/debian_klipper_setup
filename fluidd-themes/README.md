@@ -1,6 +1,12 @@
 # Fluidd Theme
 
 ```
+https://raw.githubusercontent.com/Sthopeless/debian_klipper_setup/refs/heads/main/fluidd-themes/config.json
+```
+
+## IMAGES
+
+```
 https://raw.githubusercontent.com/Sthopeless/debian_klipper_setup/refs/heads/main/fluidd-themes/logo_anycubic.svg
 ```
 
